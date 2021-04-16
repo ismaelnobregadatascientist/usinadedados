@@ -11,6 +11,9 @@ const theme = {
   bar: {
     stroke: "#FFCCC7",
     strokeWidth: 4
+  },
+  selections: {
+    
   }
   
 
