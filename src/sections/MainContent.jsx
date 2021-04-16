@@ -25,13 +25,13 @@ const MainContent = () => {
       </Box>
       
 
-      <CurrentSelections minHeight="60px" width="100%" size="small" />
+      <CurrentSelections minHeight="60px" width="100%" size="medium" />
       <Box width="100%" direction={flexDirection}>
         <Box flex={true} height={{min: '120px'}} {...boxProps}>
-        <KPI roundNum={false} label='Número de Empresas' cols={[ "=Count({<TIPO_ESTAB = {'1'}, [%CODSITCADST]={'02'}>} NUM_CNPJ)"]} />
+        <KPI roundNum={false} label='Número de Empresas' cols={[ "=num(Count({<TIPO_ESTAB = {'1'}, [%CODSITCADST]={'02'}>} NUM_CNPJ), '#.##0', ',', '.')"]} />
         </Box>
         <Box flex={true} height={{min: '120px'}} {...boxProps}>
-        <KPI roundNum={false} label='Número de Estabelecimentos' cols={[ "=Count({<[%CODSITCADST]={'02'}>} NUM_CNPJ)"]} />
+        <KPI roundNum={false} label='Número de Estabelecimentos' cols={[ "=num(Count({<[%CODSITCADST]={'02'}>} NUM_CNPJ), '#.##0', ',', '.')"]} />
         </Box>
         <Box flex={true} height={{min: '120px'}} {...boxProps}>
         <KPI roundNum={false} label='Participação (%)' cols={[ "=(Count( NUM_CNPJ)/count({1} NUM_CNPJ))*100"]} />
@@ -43,11 +43,13 @@ const MainContent = () => {
         <Box width={dynamicWidth} height={{min: '200px'}} {...boxProps} overflow="visble"></Box> */}
         <Box width={dynamicWidth} height={{min: '200px'}} {...boxProps} overflow="visble">
         <Bar
-            width={650}
+            width={850}
             height={550}
             roundNum={false}
             title="Empresas por Setor"
             size='medium'
+            legendLabelStyle={{fontFamily: 'MontSerrat', fontWeight: 400}}
+            valueLabelStyle={{fontSize: "large", fontWeight: "bold", fontFamily: 'Montserrat'}}
             colorTheme='eco'
             
                 cols={[
@@ -60,16 +62,24 @@ const MainContent = () => {
         <Box width={dynamicWidth} height={{min: '200px'}} {...boxProps} overflow="visble">
 
         <Bar
-            width={650}
+            width={950}
             height={550}
             roundNum={false}
+            legendLabelStyle={{fontFamily: 'MontSerrat', fontWeight: 400}}
+            valueLabelStyle={{fontSize: "large", fontWeight: "bold", fontFamily: 'Montserrat'}}
+            xAxisStyles={{
+              
+              fontFamily: 'Oswald'
+            
+              }}
             title="Empresas por Porte"
             size='medium'
             colorTheme='eco'
             
+            
                 cols={[
                   "Porte",
-                  { qField: "=Count([NUM_CNPJ])", qLabel: "Empresas Ativas" }
+                  { qField: "=Num(Count([NUM_CNPJ]), '#.##0', ',', '.')", qLabel: "Empresas Ativas" }
        
                 ]}
         />

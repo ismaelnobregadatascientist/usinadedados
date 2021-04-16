@@ -5,18 +5,16 @@ const theme = {
       brand: '#343a40',
       brandLight: '#FFCCC7',
     },
-    fontFamily: 'Oswald',
-    bar: {
-      stroke: "#fff",
-      strokeWidth: 5
-    }
-
+    fontFamily: 'Montserrat',
     
-    
-    
-
-    
+  },
+  bar: {
+    stroke: "#FFCCC7",
+    strokeWidth: 4
   }
+  
+
+
 }
 
 export default theme

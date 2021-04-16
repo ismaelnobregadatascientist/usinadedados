@@ -4,6 +4,7 @@ export const config = {
   secure: true,
   port: 443,
   prefix: '',
+  route: 'app/engineData',
   appId: 'd183a25e-de1d-47a0-b2a0-459dfbbc20d1'
  
 };
