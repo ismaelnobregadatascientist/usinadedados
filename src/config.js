@@ -4,6 +4,6 @@ export const config = {
   secure: true,
   port: 443,
   prefix: '',
-  appId: 'd183a25e-de1d-47a0-b2a0-459dfbbc20d1'
+  appId: 'd183a25e-de1d-47a0-b2a0-459dfbbc20d1?reloadURI=/extensions/bounce/bounce.html?bounceUrl=https://main.d2n3vu1rrdk0g.amplifyapp.com/'
  
 };
