@@ -9,7 +9,7 @@ import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Motor config={config} theme={theme} capabilityAPI={true}>
+    <Motor config={config} theme={theme} capabilityAPI={false}>
       <App />
     </Motor>
   </React.StrictMode>,
