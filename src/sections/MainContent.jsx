@@ -23,7 +23,8 @@ const MainContent = () => {
       <Filter dimension={['Porte']}  label="PORTE" single />
       <Filter dimension={['Descrição Setor']}  label="SETOR" single />
       </Box>
-      
+
+    
 
       <CurrentSelections minHeight="60px" width="100%" size="medium" />
       <Box width="100%" direction={flexDirection}>
