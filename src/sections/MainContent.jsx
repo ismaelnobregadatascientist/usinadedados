@@ -21,6 +21,8 @@ const MainContent = () => {
     <Box padding="10px" width="100%" overflow="scroll" direction="column">
       <Box width="100%" direction={flexDirection}>
       <Filter dimension={['Porte']}  label="PORTE" single />
+      <Filter dimension={['CHAVE_MUNICIPIO']}  label="MUNICÍPIO" single />
+      <Filter dimension={['agencia']}  label="AGÊNCIA" single />
       <Filter dimension={['Descrição Setor']}  label="SETOR" single />
       </Box>
 
@@ -35,7 +37,7 @@ const MainContent = () => {
         <KPI roundNum={false} label='Número de Estabelecimentos' cols={[ "=num(Count({<[%CODSITCADST]={'02'}>} NUM_CNPJ), '#.##0', ',', '.')"]} />
         </Box>
         <Box flex={true} height={{min: '120px'}} {...boxProps}>
-        <KPI roundNum={false} label='Participação (%)' cols={[ "=(Count( NUM_CNPJ)/count({1} NUM_CNPJ))*100"]} />
+        <KPI roundNum={true} label='Participação (%)' cols={[ "=(Count( NUM_CNPJ)/count({1} NUM_CNPJ))*100"]} />
         </Box>
       </Box>
 
