@@ -20,7 +20,7 @@ const MainContent = () => {
   return (
     <Box padding="10px" width="100%" overflow="scroll" direction="column">
       <Box width="100%" direction={flexDirection}>
-      <Filter dimension={['Porte']}  label="PORTE" single />
+      <Filter dimension={['Porte2']}  label="PORTE" single />
       <Filter dimension={['CHAVE_MUNICIPIO']}  label="MUNICÍPIO" single />
       <Filter dimension={['agencia']}  label="AGÊNCIA" single />
       <Filter dimension={['Descrição Setor']}  label="SETOR" single />
