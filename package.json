@@ -38,5 +38,5 @@
   "engines": {
     "node": "14.x"
   },
-  "proxy": "http://localhost:3000"
+  "proxy": "https://qap.sebrae.com.br/qps"
 }
